@@ -32,6 +32,12 @@ They can be edited using a `nc_config.json` file or through cli args :
 }
 ```
 
+and
+
+```sh
+pync -c nc_config.json
+```
+
 is equivalent to :
 
 ```sh
