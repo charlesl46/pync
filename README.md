@@ -1,5 +1,11 @@
 # PyNC (PyNamingConvention)
 
+<center>
+
+!["logo"](assets/logo.png)
+
+</center>
+
 ## Description
 
 The goal of this package is to set a naming convention for your python_modules/folders/python module vars and check if it's respected by your python_modules/folders/python module vars.
