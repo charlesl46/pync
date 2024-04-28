@@ -15,8 +15,6 @@ The parser has for default params following :
 They can be edited using a `nc_config.json` file or through cli args :
 
 ```json
-// nc_config.json
-
 {
     "path" : ".",
     "fonc" : "^[a-z]+(-[a-z]+)*$",
@@ -30,7 +28,9 @@ They can be edited using a `nc_config.json` file or through cli args :
 
 is equivalent to :
 
-`pync -p . --fonc "^[a-z]+(-[a-z]+)*$" --finc "^[a-z]+(_[a-z]+)*$" --varsnc "^[a-z]+(_[a-z]+)*$" -v --fail-under 0.5`
+```sh
+pync -p . --fonc "^[a-z]+(-[a-z]+)*$" --finc "^[a-z]+(_[a-z]+)*$" --varsnc "^[a-z]+(_[a-z]+)*$" -v --fail-under 0.5
+```
 
 > Beware that the authorized filenames arg (`authf`) can't be passed in cli, requires json config file to use different value than default, which is `["__main__.py","__init__.py"]`
 
