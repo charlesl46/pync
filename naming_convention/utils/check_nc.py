@@ -6,11 +6,9 @@ from naming_convention.utils.utils import get_filename, is_authorized_filename
 def check_nc(name: str, nc_regex: re.Pattern) -> bool:
     return nc_regex.match(name)
 
-
 def check_nc_folder(folderpath: str, nc_regex: str) -> bool:
     foldername = get_filename(folderpath)
     return check_nc(foldername, nc_regex)
-
 
 def check_nc_file(filepath: str, nc_regex: str) -> bool:
     filename_with_ext = get_filename(filepath)

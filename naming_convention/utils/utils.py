@@ -30,7 +30,7 @@ def cache_file_exists(base_path: str) -> bool:
 def get_cached_content(base_path: str) -> dict:
     cache_file_path = os.path.join(base_path, CACHE_FILENAME)
     with open(cache_file_path, "r") as file:
-        content = json.load(file)
+        content : dict = json.load(file)
     return content
 
 
@@ -40,10 +40,8 @@ def create_cache_file(base_path: str, score: float) -> None:
     with open(cache_file_path, "w") as file:
         json.dump(content, file)
 
-
 def is_authorized_filename(filename: str):
     return filename in AUTHORIZED_FILENAMES
-
 
 def is_valid_regex(regex: str):
     try:
@@ -52,14 +50,11 @@ def is_valid_regex(regex: str):
     except re.error:
         return False
 
-
 def get_filename(filepath: str) -> str:
     return os.path.basename(filepath)
 
-
 def is_python_module(filepath: str) -> bool:
     return os.path.basename(filepath).endswith(".py")
-
 
 def percentage_color(percentage: float):
     if percentage > 0.8:
